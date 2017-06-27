@@ -3,7 +3,7 @@
 React is a JavaScript library for building user interfaces.
 https://facebook.github.io/react/
 
-## Getting Started
+## Getting Started
 - Create a new folder and run these bash commands to set-up the React environment:
 
   macOS
