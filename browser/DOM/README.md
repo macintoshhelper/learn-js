@@ -67,3 +67,33 @@ searchInput.addEventListener('click', function(event) {
   console.log(event);
 })
 ```
+
+## Creating element nodes
+You can create element nodes and attach them to the DOM
+- Create an element node with `document.createElement('htmlElement')`
+- And you can append it to an existing element node with `.appendChild(newElement)`
+
+```js
+/*  <div id="rootContainer">
+ *    
+ *  </div>
+ */
+var rootContainer = document.getElementById('rootContainer');
+
+var fruit = ['banana', 'pear', 'orange'];
+
+var fruitList = document.createElement('ul');
+
+for (i = 0; i < fruit.length; i++) {
+  var fruitItem = fruit[i];
+
+  var fruitListItem = document.createElement('li');
+  fruitListItem.textContent = fruitItem;
+  fruitListItem.className = fruitItem;
+
+  fruitList.appendChild(fruitListItem);
+}
+
+rootContainer.appendChild(fruitListContainer);
+
+```
