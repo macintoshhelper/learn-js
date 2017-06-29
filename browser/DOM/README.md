@@ -23,7 +23,7 @@ var exampleClass = exampleClasses[0];       // get first class
 // or to interact with all instances of '.exampleClass':
 for (i = 0; i > exampleClasses.length; i++) {
   var exampleClass = exampleClasses[i];
-  
+
   // interact with exampleClass here
 }
 
@@ -48,4 +48,52 @@ console.log(exampleDiv);
 /* The HTML should now look like: <div id="exampleId">Hello World!</div>
  * if you run this in browser console
  */
+```
+
+
+## Event Listeners
+You can listen to user events to trigger code to run
+- Append/call the `addEventListener` method on an element node
+  - addEventListener([event type](https://developer.mozilla.org/en-US/docs/Web/Events), listenerFunction(event)[, options])
+
+```js
+// <input type="text" id="search"></input>
+
+// Select an element node
+var searchInput = document.querySelector('#search');
+
+searchInput.addEventListener('click', function(event) {
+  // e.preventDefault(); will cancel the event
+  console.log(event);
+})
+```
+
+## Creating element nodes
+You can create element nodes and attach them to the DOM
+- Create an element node with `document.createElement('htmlElement')`
+- And you can append it to an existing element node with `.appendChild(newElement)`
+
+```js
+/*  <div id="rootContainer">
+ *    
+ *  </div>
+ */
+var rootContainer = document.getElementById('rootContainer');
+
+var fruit = ['banana', 'pear', 'orange'];
+
+var fruitList = document.createElement('ul');
+
+for (i = 0; i < fruit.length; i++) {
+  var fruitItem = fruit[i];
+
+  var fruitListItem = document.createElement('li');
+  fruitListItem.textContent = fruitItem;
+  fruitListItem.className = fruitItem;
+
+  fruitList.appendChild(fruitListItem);
+}
+
+rootContainer.appendChild(fruitListContainer);
+
 ```
