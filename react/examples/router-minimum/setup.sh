@@ -1,3 +1,10 @@
+
+mkdir client/components
+touch client/components/App.jsx
+
+bash populate-config.sh
+
+
 npm init -y
 npm install -s webpack webpack-dev-server path  # install webpack, dev server and path
 touch webpack.config.js # create webpack config
