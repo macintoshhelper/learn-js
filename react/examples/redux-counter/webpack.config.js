@@ -1,23 +1,50 @@
 const path = require('path');
 
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const HtmlWebpackPluginConfig = new HtmlWebpackPlugin({
-  template: './client/index.html',
-  filename: 'index.html',
-  inject: 'body'
-})
+
+const sourcePath = path.join(__dirname, './client');
+const jsSourcePath = path.join(sourcePath, './js');
+const buildPath = path.join(__dirname, './build');
+
+const plugins = [
+  new HtmlWebpackPlugin({
+    template: path.join(sourcePath, 'index.html'),
+    path: buildPath,
+    filename: 'index.html',
+  }),
+];
+
+const rules = [
+  {
+    test: /\.(js|jsx)$/,
+    exclude: /node_modules/,
+    use: [
+      'babel-loader',
+    ],
+  },
+];
+
 
 module.exports = {
-  entry: './client/index.js',
+  entry: [
+    'babel-polyfill',
+    path.join(jsSourcePath, 'index.js'),
+  ],
   output: {
-    path: path.resolve('dist'),
-    filename: 'index_bundle.js'
+    path: buildPath,
+    publicPath: '/',
+    filename: 'app-[hash].js',
+  },
+  devtool: 'source-map',
+  resolve: {
+    extensions: ['.webpack-loader.js', '.web-loader.js', '.loader.js', '.js', '.jsx'],
+    modules: [
+      path.resolve(__dirname, 'node_modules'),
+      jsSourcePath,
+    ],
   },
   module: {
-    loaders: [
-      { test: /\.js$/, loader: 'babel-loader', exclude: /node_modules/ },
-      { test: /\.jsx$/, loader: 'babel-loader', exclude: /node_modules/ }
-    ]
+    rules,
   },
-  plugins: [HtmlWebpackPluginConfig]
-}
+  plugins,
+};
