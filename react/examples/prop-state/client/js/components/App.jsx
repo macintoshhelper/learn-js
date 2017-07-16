@@ -1,14 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-// class App extends React.Component {
-//   render() {
-//     return (
-//       <div style={{ textAlign: 'center' }}>
-//         <h1>Hello World</h1>
-//       </div>);
-//   }
-// }
 class App extends React.Component {
   constructor(props) {
     super(props);

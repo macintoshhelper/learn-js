@@ -1,7 +1,7 @@
 {
-  "name": "boilerplate",
+  "name": "server-router",
   "version": "1.0.0",
-  "description": "This is a boilerplate using: Redux, react-router and fetch",
+  "description": "",
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server",
@@ -18,11 +18,10 @@
     "path": "^0.12.7",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
-    "react-redux": "^5.0.5",
+    "react-router": "^4.1.1",
     "react-router-dom": "^4.1.1",
-    "redux": "^3.7.1",
-    "webpack": "^3.0.0",
-    "webpack-dev-server": "^2.5.0"
+    "webpack": "^3.2.0",
+    "webpack-dev-server": "^2.5.1"
   },
   "devDependencies": {
     "babel-core": "^6.25.0",
