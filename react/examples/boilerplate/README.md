@@ -12,9 +12,10 @@ npm start
 Use to update or reinstall dependencies
 ```sh
 # Generic React dependencies
-npm i -s babel-polyfill html-webpack-plugin path react react-dom webpack webpack-dev-server
+npm i -s babel-polyfill path react react-dom webpack
 npm i --save-dev babel-core babel-loader babel-preset-es2015 babel-preset-react
 
 # Project specific dependencies
-npm i -s react-router-dom
+npm i -s redux react-redux react-router-dom
+npm i -s express hbs
 ```
