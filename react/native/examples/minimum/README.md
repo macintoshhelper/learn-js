@@ -53,4 +53,3 @@ To start a project from scratch:
 
     ```
 
-
