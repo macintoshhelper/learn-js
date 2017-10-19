@@ -3,6 +3,11 @@
 React is a JavaScript library for building user interfaces.
 https://facebook.github.io/react/
 
+## Contents:
+- **React Core**
+  - [Component](./component/)
+  - []
+
 ## Getting Started
 - Create a new folder and run these bash commands to set-up the React environment:
 
@@ -29,5 +34,6 @@ https://facebook.github.io/react/
 
   ```
 
-## Resources
+
+## Resources
 - [react-howto README](https://github.com/petehunt/react-howto)
