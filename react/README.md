@@ -34,6 +34,21 @@ https://facebook.github.io/react/
 
   ```
 
+## Creating an Element
+```js
+import React from 'react';
+
+class Hello extends React.Component {
+  render() {
+    return React.createElement('div', null, `Hello ${this.props.name}`);
+  }
+}
+
+ReactDOM.render(
+  React.createElement(Hello, { name: 'World' }, null),
+  document.getElementById('root')
+);
+```
 
 ## Resources
 - [react-howto README](https://github.com/petehunt/react-howto)
